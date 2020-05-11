@@ -1,0 +1,72 @@
+README
+May 6, 2020
+LING 380 Final Project 
+Leo Chen
+Under Professor Robert Frank, TA: Sophie Hao
+
+Binary Classifier for Prenominal Adjectival Ordering
+
+NOTE: IF adj_emb0.npy and adj_emb1.npy are in the current directory
+then you do not need to parse the corpora! Simply run train.py in terminal!
+
+Instructions to build datasets and train the model from scratch:
+
+Set up:
+
+Required python packages:
+numpy
+torch
+bcolz
+pickle
+
+How the directory is organized:
+"master" folder:
+	dataset.py, 
+	model.py, 
+	process_bnc.py, 
+	process_ptb.py, 
+	tools.py, 
+	train.py, 
+	vectorize.py
+
+	"data" folder:
+		empty
+
+	"glove" folder:
+		glove.6b.50d.txt (obtain from GloVe website)
+
+	"BNC" folder": (contains British National Corpus)
+		**CONTENTS OF BNC**
+	"treebank_3" folder: (contains Penn Treebank)
+		**CONTENTS OF PTB**
+
+Datasets:
+If not included, full Penn Treebank corpus and British National Corpus should be in the same directory 
+
+Before you run train, you must prepare the data
+1) Load in and extract prenominal adjective pairs 
+using process_bnc.py and process_ptb.py
+2) Combine outputs of process_bnc and process_ptb into one text file, adj_all.txt
+3) Use vectorize.py to convert adjectives to model inputs
+
+
+Here are the terminal commands you can follow in sequence 
+You must be in master directory to begin($cd ~/USER/pathto/master)
+
+$python process_ptb.txt
+$python process_bnc.txt
+$cd data
+$cat adj_bnc.txt > adj_all.txt
+$cat adj_ptb.txt >> adj_all.txt
+$cd ..
+$python vectorize.py
+
+Now data is ready and you can begin training the model
+$python train.py
+
+You can edit tests by editting myadjpairs list at the end of train.py
+
+
+.
+.
+.
