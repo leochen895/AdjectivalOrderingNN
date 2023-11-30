@@ -2,6 +2,8 @@ README
 
 Binary Classifier for Prenominal Adjectival Ordering
 
+Have you noticed that there is a correct order to using adjectives in English? See this link: <https://en.wikipedia.org/wiki/Adjective#Order>
+
 NOTE: IF adj_emb0.npy and adj_emb1.npy are in the current directory
 then you do not need to parse the corpora! Simply run train.py in terminal!
 
