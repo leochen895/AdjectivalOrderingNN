@@ -1,10 +1,9 @@
-README
-
 Binary Classifier for Prenominal Adjectival Ordering
+Have you noticed that there is a learned specific order to using adjectives before nouns in English? See this link: <https://en.wikipedia.org/wiki/Adjective#Order>
 
 This is a simple 2 layer neural network that correctly classifies whether two adjectives are in the correct order using word embeddings.
 Code includes parsing corpus data, training, and testing.
-Have you noticed that there is a correct order to using adjectives before nouns in English? See this link: <https://en.wikipedia.org/wiki/Adjective#Order>
+
 
 NOTE: IF adj_emb0.npy and adj_emb1.npy are in the current directory
 then you do not need to parse the corpora! Simply run train.py in terminal!
